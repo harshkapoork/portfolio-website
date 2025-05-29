@@ -1,3 +1,37 @@
 * {
     background-color: aliceblue;
+    box-sizing: border-box;
+
+}
+
+#navlist {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    ;
+}
+
+#navlist li a {
+    text-decoration: none;
+
+
+
+    color: black;
+
+}
+
+#navlist li a:hover {
+    color: blue;
+}
+
+#sectiondiv {
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+
+.section {
+    height: 80vh;
+    background-color: lightgray;
+
 }
