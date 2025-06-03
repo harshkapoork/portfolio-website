@@ -1,15 +1,33 @@
 * {
-    background-color: aliceblue;
+
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+
 
 }
 
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+
+
 #navlist {
+
+    height: 70px;
+    background-color: transparent;
+    align-items: center;
+    text-align: center;
     display: flex;
     list-style-type: none;
     justify-content: space-around;
-    ;
+    gap: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.344);
+
 }
+
 
 #navlist li a {
     text-decoration: none;
@@ -21,7 +39,7 @@
 }
 
 #navlist li a:hover {
-    color: blue;
+    color: #3E96F4;
 }
 
 #sectiondiv {
@@ -30,8 +48,257 @@
     gap: 2px
 }
 
+/*Title */
+.title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: larger;
+
+
+}
+
 .section {
-    height: 80vh;
-    background-color: lightgray;
+    height: 100vh;
+    /* background-color: rgb(134, 22, 22); */
+
+    position: relative;
+
+}
+
+
+/* Hero */
+.hero-text i {
+
+    font-weight: 700;
+}
+
+.hero-text {
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    color: #31393C;
+    font-family: "cursive";
+    font-size: 3em;
+    background-color: transparent;
+    width: 40%;
+    height: 100%;
+    text-align: end;
+    justify-content: center;
+    gap: 10px;
+    z-index: 3;
+}
+
+.hero-text button {
+    background-color: #3E96F4;
+    height: 30px;
+    width: fit-content;
+    padding: 2px 30px;
+    color: #EDEEEB;
+    align-self: center;
+    border: none;
+}
+
+.hero-text button:hover {
+    background-color: blue;
+}
+
+.hero-text p {
+    font-size: small;
+    font-weight: lighter;
+    opacity: 80%;
+    word-wrap: break-word;
+    justify-content: center;
+    display: flex;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    position: relative;
+
+    z-index: 0;
+
+
+
+}
+
+/* Effects*/
+#navlist li i:hover,
+li a:hover {
+    color: #3E96F4;
+    transition: all 0.3s ease-in-out;
+
+}
+
+
+/*Responsiness */
+@media screen and (max-width: 600px) {
+    .section {
+        min-height: fit-content;
+        height: 56vh;
+
+    }
+
+    #navlist {
+        height: auto;
+        flex-direction: column;
+        align-items: start;
+
+    }
+
+    .hero-image {
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .hero-text {
+
+        width: 100%;
+        justify-content: start;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+/* contact section*/
+.contact-form {
+
+    height: 90%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1%
+}
+
+.contact-form input,
+textarea {
+    background-color: transparent;
+    resize: none;
+    justify-content: end;
+    width: 70%;
+    height: 10vh;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.contact-form textarea {
+    height: 30%;
+    margin-bottom: 4%;
+
+}
+
+.contact-form button {
+    width: 70%;
+    height: 10vh;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.contact-form input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.38);
+    font-size: small;
+    text-transform: capitalize;
+}
+
+.contact-handles {
+
+    height: 45%;
+    display: flex;
+    justify-content: space-evenly;
+
+
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.contact-handles li {
+    border: 1px solid rgba(255, 255, 255, 0.407);
+    width: 25%;
+    height: 80%;
+    justify-content: center;
+    gap: 2vh;
+
+
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.social-handles {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-handles a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+}
+
+/*Skills*/
+.skills-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2%;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+
+}
+
+.progress {
+    width: 90%;
+    border: 3px solid rgb(26, 12, 119);
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
 
 }
